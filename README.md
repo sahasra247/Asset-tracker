@@ -19,6 +19,8 @@ A mobile Raspberry Pi unit attached to the asset emits periodic BLE beacons, whi
 For outdoor tracking, a GPS module is interfaced with the mobile Raspberry Pi to provide precise latitude and longitude coordinates when satellite connectivity is available. This hybrid approach allows the system to switch seamlessly between indoor RSSI-based localization and outdoor GPS tracking, ensuring continuous and accurate asset monitoring under varied conditions.
 
 
+![image](https://github.com/user-attachments/assets/96cf0d40-58f0-4f0e-95de-2ab218d166d9)
+
 # Literature Survey
 Asset-tracking technologies have evolved significantly to support real-time monitoring of items across sectors like logistics, healthcare, and manufacturing. Several positioning methods have been explored in literature, including GPS, RFID, Wi-Fi, and Bluetooth Low Energy (BLE).
 
