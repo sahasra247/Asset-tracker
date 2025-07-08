@@ -60,7 +60,7 @@ ngrock
 # Step 2: Expose Server Using ngrok
 # 2.1 Download ngrok
 
-# Visit: https://ngrok.com/download
+Visit: https://ngrok.com/download
 # 2.2 Run ngrok
 
 Public URL like this is obtained:
@@ -73,9 +73,6 @@ Copy the URL — needed on both RPis.
 Changed RPi_ID to "RPi-A" or "RPi-B" as needed.
 # Outdoor Tracking
 To ensure accurate asset positioning in outdoor environments, the system integrates a NEO-7M GPS module with the mobile Raspberry Pi. The NEO-7M is known for its high sensitivity and reliable performance, making it an ideal choice for outdoor tracking.
-
-Check this out!
-
 # Results
 The asset-tracking system was tested in both indoor and outdoor environments. Indoors, RSSI values were successfully received from both RPi-A and RPi-B, and approximate position estimates were derived using trilateration. Outdoors, the GPS module interfaced with the mobile Raspberry Pi provided accurate latitude and longitude coordinates, enabling location tracking even in the absence of BLE receivers.
 
