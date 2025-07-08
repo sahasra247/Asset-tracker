@@ -54,3 +54,50 @@ ngrock
 
 # Step 1: Central Server (Laptop)
 # 1.1 Install Flask
+# 1.2 Create rssi_server.py
+# 1.3 Run the Server
+
+# Step 2: Expose Server Using ngrok
+# 2.1 Download ngrok
+
+# Visit: https://ngrok.com/download
+# 2.2 Run ngrok
+
+Public URL like this is obtained:
+Forwarding: https://1234abcd.ngrok.io → http://localhost:5000
+
+Copy the URL — needed on both RPis.
+# Step 3: RPi-A and RPi-B Setup
+# Install Dependencies
+# 3.1 Create rssi_sender.py on Each RPi
+Changed RPi_ID to "RPi-A" or "RPi-B" as needed.
+# Outdoor Tracking
+To ensure accurate asset positioning in outdoor environments, the system integrates a NEO-7M GPS module with the mobile Raspberry Pi. The NEO-7M is known for its high sensitivity and reliable performance, making it an ideal choice for outdoor tracking.
+
+Check this out!
+
+# Results
+The asset-tracking system was tested in both indoor and outdoor environments. Indoors, RSSI values were successfully received from both RPi-A and RPi-B, and approximate position estimates were derived using trilateration. Outdoors, the GPS module interfaced with the mobile Raspberry Pi provided accurate latitude and longitude coordinates, enabling location tracking even in the absence of BLE receivers.
+
+# Key Observations:
+Real-time RSSI Logging: The central server received RSSI values from both RPis at ~2-second intervals. This confirmed stable communication between the RPis and the server.
+
+BLE Detection Range: RSSI values showed a consistent inverse relationship with distance—stronger (less negative) RSSI values were observed when the asset was closer to the receiver.
+
+RSSI Fluctuations: Some fluctuation in RSSI values was observed due to environmental factors (e.g., obstacles, reflections). Smoothing techniques (e.g., moving average) can be applied to enhance accuracy.
+
+Position Estimation: Although the current setup uses only two receivers (which gives approximate location via rough distance estimation), trilateration logic can be extended by adding a third fixed node to improve localization precision.
+
+Outdoor Tracking Observations: The GPS module provided coordinates with an average accuracy of 3–5 meters in open sky conditions.
+
+References
+Faragher, R., & Harle, R. (2015). Location Fingerprinting With Bluetooth Low Energy Beacons. IEEE Journal on Selected Areas in Communications, 33(11), 2418–2428.
+
+Zafari, F., Gkelias, A., & Leung, K. K. (2019). A Survey of Indoor Localization Systems and Technologies. IEEE Communications Surveys & Tutorials, 21(3), 2568–2599.
+
+Groves, P. D. (2013). Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems. Artech House.
+
+Misra, P., & Enge, P. (2006). Global Positioning System: Signals, Measurements, and Performance. Ganga-Jamuna Press.
+
+Patil, A., Desai, A., & Jadhav, R. (2021). BLE-based Indoor Positioning System Using Raspberry Pi. International Journal of Engineering Research & Technology (IJERT), 10(4).
+
